@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/05/08 11:15:37.913.pas,C:\Users\user\OneDrive\Documentos\Borland Studio Projects\Unit1.pas=C:\Users\user\OneDrive\Documentos\GitHub\To-Do-List\FORMS\UMenu.pas</Transaction>
+    <Transaction>2023/05/08 11:15:37.913.dfm,C:\Users\user\OneDrive\Documentos\Borland Studio Projects\Unit1.dfm=C:\Users\user\OneDrive\Documentos\GitHub\To-Do-List\FORMS\UMenu.dfm</Transaction>
+    <Transaction>2023/05/08 11:15:51.508.bdsproj,C:\Users\user\OneDrive\Documentos\Borland Studio Projects\Project1.bdsproj=C:\Users\user\OneDrive\Documentos\GitHub\To-Do-List\PROJECT\ProjToDoList.bdsproj</Transaction>
+    <Transaction>2023/05/08 16:03:26.943.pas,C:\Users\user\OneDrive\Documentos\GitHub\To-Do-List\PROJECT\Unit1.pas=C:\Users\user\OneDrive\Documentos\GitHub\To-Do-List\FORMS\ULogin.pas</Transaction>
+    <Transaction>2023/05/08 16:03:26.943.dfm,C:\Users\user\OneDrive\Documentos\GitHub\To-Do-List\PROJECT\Unit1.dfm=C:\Users\user\OneDrive\Documentos\GitHub\To-Do-List\FORMS\ULogin.dfm</Transaction>
+    <Transaction>2023/05/09 10:37:24.041.pas,C:\Users\user\OneDrive\Documentos\GitHub\To-Do-List\PROJECT\Unit1.pas=C:\Users\user\OneDrive\Documentos\GitHub\To-Do-List\FORMS\Conexao.pas</Transaction>
+    <Transaction>2023/05/09 10:37:24.041.dfm,C:\Users\user\OneDrive\Documentos\GitHub\To-Do-List\PROJECT\Unit1.dfm=C:\Users\user\OneDrive\Documentos\GitHub\To-Do-List\FORMS\Conexao.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

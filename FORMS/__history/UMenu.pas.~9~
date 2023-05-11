@@ -1,0 +1,54 @@
+unit UMenu;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, ExtCtrls, Buttons, ActnList, ToolWin, ActnMan, ActnCtrls, ActnMenus,
+  XPStyleActnCtrls;
+
+type
+  TfrmMenu = class(TForm)
+    pnlCentro: TPanel;
+    pnlMenu: TPanel;
+    btnExit: TSpeedButton;
+    btnMenu: TSpeedButton;
+    btnWorks: TSpeedButton;
+    btnGoals: TSpeedButton;
+    btnMonth: TSpeedButton;
+    btnWeek: TSpeedButton;
+    btnDay: TSpeedButton;
+    btnMenu2: TSpeedButton;
+    ActionManager1: TActionManager;
+    ActionMainMenuBar1: TActionMainMenuBar;
+    Action1: TAction;
+    Action2: TAction;
+    ControlAction1: TControlAction;
+    procedure btnMenuClick(Sender: TObject);
+    procedure btnMenu2Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmMenu: TfrmMenu;
+
+implementation
+
+uses ULogin;
+
+{$R *.dfm}
+
+procedure TfrmMenu.btnMenu2Click(Sender: TObject);
+begin
+  pnlMenu.Visible := True;
+end;
+
+procedure TfrmMenu.btnMenuClick(Sender: TObject);
+begin
+  pnlMenu.Visible := False;
+end;
+
+end.

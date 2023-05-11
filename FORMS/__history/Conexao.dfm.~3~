@@ -1,0 +1,54 @@
+object dm: Tdm
+  OldCreateOrder = False
+  Height = 200
+  Width = 327
+  object Conexao: TSQLConnection
+    ConnectionName = 'IBConnection'
+    DriverName = 'Interbase'
+    GetDriverFunc = 'getSQLDriverINTERBASE'
+    LibraryName = 'dbxint30.dll'
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverName=Interbase'
+      'Database=database.gdb'
+      'RoleName=RoleName'
+      'User_Name=sysdba'
+      'Password=masterkey'
+      'ServerCharSet='
+      'SQLDialect=3'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'BlobSize=-1'
+      'CommitRetain=False'
+      'WaitOnLocks=True'
+      'Interbase TransIsolation=ReadCommited'
+      'Trim Char=False')
+    VendorLib = 'gds32.dll'
+    Left = 24
+    Top = 23
+  end
+  object sqlLogin: TSQLDataSet
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = Conexao
+    Left = 24
+    Top = 80
+  end
+  object dspLogin: TDataSetProvider
+    DataSet = sqlLogin
+    Left = 57
+    Top = 80
+  end
+  object cdsLogin: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'dspLogin'
+    Left = 91
+    Top = 80
+  end
+  object dtsLogin: TDataSource
+    DataSet = cdsLogin
+    Left = 125
+    Top = 80
+  end
+end

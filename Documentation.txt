@@ -1,0 +1,10 @@
+08/05/2023
+To Do List software documentation:
+
+Created menu initial with some buttons being them:
+Tasks (Menu retractable)
+
+Day by Day (For everyday tasks)
+Month (For monthly tasks)
+Works (For pending work of the month and projects)
+Goals of the year(Made for annual goals and objectives)

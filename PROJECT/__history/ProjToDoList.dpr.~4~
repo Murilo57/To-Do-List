@@ -1,0 +1,17 @@
+program ProjToDoList;
+
+uses
+  Forms,
+  UMenu in '..\FORMS\UMenu.pas' {frmList},
+  ULogin in '..\FORMS\ULogin.pas' {frmLogin},
+  Conexao in '..\FORMS\Conexao.pas' {dm: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TfrmList, frmList);
+  Application.CreateForm(TfrmLogin, frmLogin);
+  Application.CreateForm(Tdm, dm);
+  Application.Run;
+end.

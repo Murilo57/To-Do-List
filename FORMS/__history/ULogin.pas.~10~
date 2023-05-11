@@ -1,0 +1,59 @@
+unit ULogin;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, ExtCtrls, StdCtrls, Buttons;
+
+type
+  TfrmLogin = class(TForm)
+    pnlCentro: TPanel;
+    edLogin: TEdit;
+    Bevel1: TBevel;
+    Image1: TImage;
+    Bevel2: TBevel;
+    edSenha: TEdit;
+    lbLogin: TLabel;
+    lbSenha: TLabel;
+    btnEntrar: TBitBtn;
+    btnSair: TBitBtn;
+    procedure btnSairClick(Sender: TObject);
+    procedure btnEntrarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmLogin: TfrmLogin;
+
+implementation
+
+uses Conexao, UMenu;
+
+{$R *.dfm}
+
+procedure TfrmLogin.btnEntrarClick(Sender: TObject);
+var Login, Senha: String;
+begin
+  dm.cdsLogin.Close;
+  dm.cdsLogin.Open;
+  if dm.cdsLogin.Locate('LOGIN',UpperCase(edLogin.Text),[]) and dm.cdsLogin.Locate('SENHA',edSenha.Text,[]) then
+  begin
+    frmList := TfrmList.Create(nil);
+    frmList.Show;
+  end
+  else
+  begin
+    ShowMessage('Erro');
+  end;
+end;
+
+procedure TfrmLogin.btnSairClick(Sender: TObject);
+begin
+  Application.Terminate;
+end;
+
+end.

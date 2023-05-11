@@ -1,0 +1,15 @@
+program ProjToDoList;
+
+uses
+  Forms,
+  UMenu in '..\FORMS\UMenu.pas' {frmList},
+  ULogin in '..\FORMS\ULogin.pas' {frmLogin};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TfrmList, frmList);
+  Application.CreateForm(TfrmLogin, frmLogin);
+  Application.Run;
+end.
