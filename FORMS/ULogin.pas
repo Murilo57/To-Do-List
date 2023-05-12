@@ -44,6 +44,8 @@ begin
   dm.cdsLogin.Open;
   if dm.cdsLogin.Locate('LOGIN',UpperCase(edLogin.Text),[]) and dm.cdsLogin.Locate('SENHA',edSenha.Text,[]) then
   begin
+    dm.User := edLogin.Text;
+    dm.Tipo := dm.cdsLoginNIVEL.AsString;
     frmMenu := TfrmMenu.Create(nil);
     frmMenu.ShowModal;
   end

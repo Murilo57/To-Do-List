@@ -70,10 +70,6 @@ object dm: Tdm
       FixedChar = True
       Size = 1
     end
-    object cdsLoginNIVEL: TStringField
-      FieldName = 'NIVEL'
-      Size = 25
-    end
   end
   object dtsLogin: TDataSource
     DataSet = cdsLogin

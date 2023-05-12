@@ -3,8 +3,8 @@ object frmDay: TfrmDay
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Day by Day'
-  ClientHeight = 701
-  ClientWidth = 359
+  ClientHeight = 742
+  ClientWidth = 499
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -20,24 +20,22 @@ object frmDay: TfrmDay
   object PgControl: TPageControl
     Left = 0
     Top = 0
-    Width = 359
-    Height = 701
-    ActivePage = TBCadastro
+    Width = 499
+    Height = 742
+    ActivePage = TBConsulta
     Align = alClient
     TabOrder = 0
     ExplicitWidth = 1113
-    ExplicitHeight = 742
     object TBCadastro: TTabSheet
       Caption = 'Cadastro'
       ExplicitWidth = 1105
-      ExplicitHeight = 714
       object Panel1: TPanel
         Left = 0
         Top = 0
-        Width = 351
-        Height = 673
+        Width = 491
+        Height = 714
         Align = alClient
-        Color = 639264
+        Color = 430359
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -13
@@ -46,61 +44,19 @@ object frmDay: TfrmDay
         ParentFont = False
         TabOrder = 0
         ExplicitWidth = 1105
-        ExplicitHeight = 714
-        object lblDay: TLabel
-          Left = 32
-          Top = 24
-          Width = 75
-          Height = 24
-          Caption = 'My Day'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -20
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-        end
-        object lblToday: TLabel
-          Left = 32
-          Top = 53
-          Width = 44
-          Height = 16
-          Caption = 'Today:'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -13
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-        end
-        object lblDate: TLabel
-          Left = 82
-          Top = 54
-          Width = 64
-          Height = 16
-          Caption = '00/00/00'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -13
-          Font.Name = 'Tahoma'
-          Font.Style = [fsBold]
-          ParentFont = False
-        end
       end
     end
     object TBConsulta: TTabSheet
       Caption = 'Consulta'
       ImageIndex = 1
       ExplicitWidth = 1105
-      ExplicitHeight = 714
       object pnlBottom: TPanel
         Left = 0
-        Top = 611
-        Width = 351
+        Top = 652
+        Width = 491
         Height = 62
         Align = alBottom
         TabOrder = 0
-        ExplicitTop = 652
         ExplicitWidth = 1105
         object DBNavigator1: TDBNavigator
           Left = 55
@@ -114,8 +70,8 @@ object frmDay: TfrmDay
       object DBGrid2: TDBGrid
         Left = 0
         Top = 0
-        Width = 351
-        Height = 611
+        Width = 491
+        Height = 652
         Align = alClient
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
@@ -125,10 +81,5 @@ object frmDay: TfrmDay
         TitleFont.Style = []
       end
     end
-  end
-  object tmDay: TTimer
-    OnTimer = tmDayTimer
-    Left = 272
-    Top = 56
   end
 end

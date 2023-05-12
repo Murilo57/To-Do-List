@@ -24,8 +24,6 @@ object frmMenu: TfrmMenu
     Align = alClient
     Color = clWhite
     TabOrder = 0
-    ExplicitWidth = 1096
-    ExplicitHeight = 582
     object btnMenu2: TSpeedButton
       Left = 0
       Top = -1
@@ -178,15 +176,15 @@ object frmMenu: TfrmMenu
       Left = 1
       Top = 1
       Width = 185
-      Height = 668
+      Height = 639
       Align = alLeft
       BevelOuter = bvNone
       Color = 6467340
       TabOrder = 0
-      ExplicitLeft = 0
+      ExplicitHeight = 668
       object btnExit: TSpeedButton
         Left = 0
-        Top = 618
+        Top = 589
         Width = 185
         Height = 50
         Cursor = crHandPoint
@@ -1233,8 +1231,39 @@ object frmMenu: TfrmMenu
           0000000000000000000000000000000000000000000000000000000000000000
           000000000000}
         ParentFont = False
+        OnClick = btnDayClick
         ExplicitTop = 53
       end
     end
+    object StatusBar1: TStatusBar
+      Left = 1
+      Top = 640
+      Width = 1131
+      Height = 29
+      Panels = <
+        item
+          Text = '00/00/0000'
+          Width = 150
+        end
+        item
+          Text = 'User'
+          Width = 150
+        end
+        item
+          Text = 'Level'
+          Width = 150
+        end
+        item
+          Text = 'Salutation'
+          Width = 150
+        end>
+      ExplicitLeft = 2
+      ExplicitTop = 646
+    end
+  end
+  object tMenu: TTimer
+    OnTimer = tMenuTimer
+    Left = 672
+    Top = 640
   end
 end

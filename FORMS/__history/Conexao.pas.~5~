@@ -44,11 +44,10 @@ type
     StringField11: TStringField;
     StringField12: TStringField;
     DataSource2: TDataSource;
-    cdsLoginNIVEL: TStringField;
   private
     { Private declarations }
   public
-    User, Tipo: String;
+    { Public declarations }
   end;
 
 var

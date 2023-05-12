@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, ExtCtrls, Buttons, ActnList, ToolWin, ActnMan, ActnCtrls, ActnMenus,
-  XPStyleActnCtrls, ComCtrls;
+  XPStyleActnCtrls;
 
 type
   TfrmMenu = class(TForm)
@@ -19,10 +19,6 @@ type
     btnWeek: TSpeedButton;
     btnDay: TSpeedButton;
     btnMenu2: TSpeedButton;
-    StatusBar1: TStatusBar;
-    tMenu: TTimer;
-    procedure tMenuTimer(Sender: TObject);
-    procedure btnDayClick(Sender: TObject);
     procedure btnExitClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormCreate(Sender: TObject);
@@ -39,15 +35,9 @@ var
 
 implementation
 
-uses ULogin, UCadastro, Conexao;
+uses ULogin;
 
 {$R *.dfm}
-
-procedure TfrmMenu.btnDayClick(Sender: TObject);
-begin
-  frmDay := TfrmDay.create(nil);
-  frmDay.ShowModal;
-end;
 
 procedure TfrmMenu.btnExitClick(Sender: TObject);
 begin
@@ -72,14 +62,6 @@ end;
 procedure TfrmMenu.FormCreate(Sender: TObject);
 begin
   frmLogin.Visible := False;
-end;
-
-procedure TfrmMenu.tMenuTimer(Sender: TObject);
-begin
-  StatusBar1.Panels[0].Text := 'Date: '+ DateToStr(Now);
-  StatusBar1.Panels[1].Text := 'User: '+ UpperCase(dm.User);
-  StatusBar1.Panels[2].Text := 'Level User: ' + dm.Tipo;
-  StatusBar1.Panels[3].Text := 'Welcome '+ UpperCase(dm.User)+'!';
 end;
 
 end.

@@ -82,7 +82,7 @@ end;
 
 procedure TfrmDay.tmDayTimer(Sender: TObject);
 begin
-  lblDate.Caption := FormatDateTime('dd/mm/yyyy', Now);
+  lblDate.Caption := FormatDateTime('dd:mm:yyyy', Now);
 end;
 
 procedure TfrmDay.tratabotao;

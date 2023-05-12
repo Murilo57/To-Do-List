@@ -1,6 +1,7 @@
 object frmLogin: TfrmLogin
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'frmLogin'
   ClientHeight = 251
   ClientWidth = 571
@@ -10,7 +11,10 @@ object frmLogin: TfrmLogin
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  KeyPreview = True
   OldCreateOrder = False
+  Visible = True
+  OnKeyPress = FormKeyPress
   PixelsPerInch = 96
   TextHeight = 13
   object pnlCentro: TPanel
@@ -2108,9 +2112,9 @@ object frmLogin: TfrmLogin
     object lbSenha: TLabel
       Left = 72
       Top = 117
-      Width = 40
+      Width = 63
       Height = 16
-      Caption = 'Senha'
+      Caption = 'Password'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
@@ -2144,6 +2148,7 @@ object frmLogin: TfrmLogin
       ParentFont = False
       PasswordChar = '*'
       TabOrder = 1
+      OnKeyPress = edSenhaKeyPress
     end
     object btnEntrar: TBitBtn
       Left = 72

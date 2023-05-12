@@ -18,6 +18,8 @@ type
     lbSenha: TLabel;
     btnEntrar: TBitBtn;
     btnSair: TBitBtn;
+    procedure FormKeyPress(Sender: TObject; var Key: Char);
+    procedure edSenhaKeyPress(Sender: TObject; var Key: Char);
     procedure btnSairClick(Sender: TObject);
     procedure btnEntrarClick(Sender: TObject);
   private
@@ -31,7 +33,7 @@ var
 
 implementation
 
-uses Conexao, UMenu;
+uses Conexao, UMenu, UMensagem;
 
 {$R *.dfm}
 
@@ -42,18 +44,30 @@ begin
   dm.cdsLogin.Open;
   if dm.cdsLogin.Locate('LOGIN',UpperCase(edLogin.Text),[]) and dm.cdsLogin.Locate('SENHA',edSenha.Text,[]) then
   begin
-    frmList := TfrmList.Create(nil);
-    frmList.Show;
+    frmMenu := TfrmMenu.Create(nil);
+    frmMenu.ShowModal;
   end
   else
   begin
-    ShowMessage('Erro');
+    msg.Aviso('Login or Password incorrect','Please correct Login or Password for proceed');
   end;
 end;
 
 procedure TfrmLogin.btnSairClick(Sender: TObject);
 begin
   Application.Terminate;
+end;
+
+procedure TfrmLogin.edSenhaKeyPress(Sender: TObject; var Key: Char);
+begin
+  if Key = #13 then
+    btnEntrarClick(nil);
+end;
+
+procedure TfrmLogin.FormKeyPress(Sender: TObject; var Key: Char);
+begin
+  if Key = #27 then
+    btnSairClick(nil);
 end;
 
 end.
