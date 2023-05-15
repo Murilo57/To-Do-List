@@ -19,7 +19,6 @@ type
     lblToday: TLabel;
     lblDate: TLabel;
     tmDay: TTimer;
-    Pnl1: TPanel;
     procedure tmDayTimer(Sender: TObject);
     procedure edtConsultaChange(Sender: TObject);
     procedure btnSair2Click(Sender: TObject);

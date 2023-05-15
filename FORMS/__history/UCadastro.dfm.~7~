@@ -45,7 +45,8 @@ object frmDay: TfrmDay
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 0
-        ExplicitLeft = 3
+        ExplicitWidth = 1105
+        ExplicitHeight = 714
         object lblDay: TLabel
           Left = 32
           Top = 24
@@ -84,15 +85,6 @@ object frmDay: TfrmDay
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
-        end
-        object Pnl1: TPanel
-          Left = 10
-          Top = 376
-          Width = 334
-          Height = 289
-          BevelOuter = bvNone
-          Color = 639264
-          TabOrder = 0
         end
       end
     end
